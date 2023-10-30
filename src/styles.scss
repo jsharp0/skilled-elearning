@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/functions";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap");
+$body-color: #83869a;
+$dark: #13183f;
+$font-family-base: "Plus Jakarta Sans", sans-serif;
+$headings-color: $dark;
+$headings-font-weight: 800;
+
+$gradient: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+$secondary-gradient: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+
+$primary: #f74780;
+$secondary: #ffa7c3;
+$tertiary: #666ca3;
+
+$btn-padding-x: 2rem;
+$btn-padding-y: 1rem;
+$btn-border-radius: 2rem;
+$btn-color: white !important;
+$btn-font-weight: 700;
+$btn-link-color: $primary;
+$btn-border-width: 0;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 1.5,
+  3: $spacer * 2,
+  4: $spacer * 6.5,
+  5: $spacer * 10,
+) !default;
+
+// Required
+@import "bootstrap/scss/bootstrap.scss";
+
+body {
+  overflow-x: hidden;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+img.desktop {
+  top: -5rem;
+  z-index: -1;
+  right: -15rem;
+}
+
+img.tablet {
+  z-index: -1;
+  right: -15rem;
+  display: block;
+  top: 1rem;
+}
+
+.landing > .row {
+  height: 550px;
+}
+
+@include media-breakpoint-down(lg) {
+  body {
+    margin-top: 1.5rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .landing > .row {
+    height: 750px;
+  }
+}
+
+.icon {
+  position: relative;
+  top: 25px;
+  z-index: 10;
+  left: 2rem;
+}
+.cards {
+  background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
+  width: 100%;
+  padding-bottom: 8.75rem;
+}
+.card {
+  border-radius: 0.9375rem;
+  border: none;
+  padding: 4rem 2rem 2.5rem 2rem;
+  box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+  height: 20.125rem;
+
+  &.bg-gradient {
+    height: 100%;
+  }
+}
+
+.btn:hover {
+  opacity: 0.5;
+  color: white;
+}
+
+.btn-link {
+  background-color: transparent;
+  text-decoration: none;
+  color: $primary;
+  padding-left: 0;
+  width: fit-content;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 1;
+    color: $secondary;
+  }
+}
+
+.btn-secondary {
+  background: $secondary-gradient;
+}
